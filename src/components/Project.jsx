@@ -1,10 +1,8 @@
 import React from 'react'
 
 const Project = ({title, projects}) => {
-  console.log(projects)
-  projects.each((k,v)=>{
-   console.log(k)
-  })
+  //console.log(projects)
+ 
   
  
   return(
