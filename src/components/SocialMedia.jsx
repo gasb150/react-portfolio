@@ -1,5 +1,6 @@
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const SocialMedia = ({ url, icon, bg }) => (
   <>
@@ -7,8 +8,14 @@ const SocialMedia = ({ url, icon, bg }) => (
       <FontAwesomeIcon icon={['fab', icon]} />
     </a>
 
-
   </>
-)
+);
 
-export default SocialMedia
+SocialMedia.propTypes = {
+
+  url: PropTypes.element.isRequired,
+  icon: PropTypes.element.isRequired,
+  bg: PropTypes.element.isRequired,
+};
+
+export default SocialMedia;

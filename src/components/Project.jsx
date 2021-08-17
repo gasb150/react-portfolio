@@ -1,19 +1,17 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
+import logo from '../assets/images/icon/favicon-32x32.png';
+import '../Styles/carrousel.css';
+import Modal from './Modal';
 
-import logo from '../assets/images/icon/favicon-32x32.png'
-import '../Styles/carrousel.css'
-import Modal from './Modal'
+const Project = ({
+  project, skills, languages, frameworks, projects,
+}) => {
+  const {
+    images, name, skillId, languageId, frameworkId, id,
+  } = project;
 
-
-const Project = ({ project, skills, languages, frameworks, projects }) => {
-
-  console.log(projects)
-  const { images, name, skill_id, language_id, framework_id, id} = project
-
-
-
-  const alt = `image_${name}`
-  console.log((Object.keys(images).length))
+  const alt = `image_${name}`;
 
   return (
     <>
@@ -21,42 +19,50 @@ const Project = ({ project, skills, languages, frameworks, projects }) => {
       <div className="card">
         <img src={images[0]} alt={alt} className="img-fluid" />
         <div className="card-body bg-dark">
-          <div className="card-title"> <h1 className="text-light">{name}</h1></div>
+          <div className="card-title">
+            {' '}
+            <h1 className="text-light">{name}</h1>
+          </div>
           <div className="row">
             <div className="col-3">
               <div className="btn btn-info">
-                {skills.map(skill => (
-                  skill.id === skill_id ? skill.name : ''
+                {skills.map((skill) => (
+                  skill.id === skillId ? skill.name : ''
                 ))}
               </div>
             </div>
             <div className="col-3">
               <div className="btn btn-info">
-                {languages.map(language => (
-                  language.id === language_id ? language.name : ''
+                {languages.map((language) => (
+                  language.id === languageId ? language.name : ''
                 ))}
               </div>
             </div>
             <div className="col-3">
               <div className="btn btn-info">
-                {frameworks.map(framework => (
-                  framework.id === framework_id ? framework.name : ''
+                {frameworks.map((framework) => (
+                  framework.id === frameworkId ? framework.name : ''
                 ))}
               </div>
             </div>
 
             <div>
-              <button className="btn btn-light mb-3 mt-5" href="url" data-bs-toggle="modal" data-bs-target={`#projectModal_${id}`}>
+              <button type="button" className="btn btn-light mb-3 mt-5" href="url" data-bs-toggle="modal" data-bs-target={`#projectModal_${id}`}>
                 <h3>
 
-
                   See this project
-                  "arrow"
-
+                  arrow
 
                 </h3>
               </button>
-              <Modal logo={logo} project={project} skills={skills} projects={projects} languages={languages} frameworks={frameworks} />
+              <Modal
+                logo={logo}
+                project={project}
+                skills={skills}
+                projects={projects}
+                languages={languages}
+                frameworks={frameworks}
+              />
             </div>
 
           </div>
@@ -64,7 +70,16 @@ const Project = ({ project, skills, languages, frameworks, projects }) => {
       </div>
 
     </>
-  )
-}
+  );
+};
 
-export default Project
+Project.propTypes = {
+
+  skills: PropTypes.element.isRequired,
+  frameworks: PropTypes.element.isRequired,
+  languages: PropTypes.element.isRequired,
+  project: PropTypes.element.isRequired,
+  projects: PropTypes.element.isRequired,
+};
+
+export default Project;

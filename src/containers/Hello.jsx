@@ -1,8 +1,9 @@
-import React from 'react'
-import MainButton from '../components/MainButton'
-import SocialContent from './SocilContent'
-import imagen1 from '../assets/images/desing/image-geometry_1.png'
-import imagen2 from '../assets/images/desing/image_geometry_2.png'
+import React from 'react';
+import MainButton from '../components/MainButton';
+import SocialContent from './SocilContent';
+import imagen1 from '../assets/images/desing/image-geometry_1.png';
+import imagen2 from '../assets/images/desing/image_geometry_2.png';
+
 const Hello = () => (
   <section id="hello" className="row p-5">
     <div className="col-lg-6">
@@ -11,18 +12,18 @@ const Hello = () => (
       <div className="col-md-5">
         <MainButton msj="Start Colaboration" url="#contact" />
         <div className="py-5">
-          <SocialContent bg='dark' />
+          <SocialContent bg="dark" />
         </div>
       </div>
     </div>
     <div className="col-lg-6 d-none d-lg-block">
-      <img src={imagen1} alt="imagen" className="img-fluid"/>
+      <img src={imagen1} alt="imagen" className="img-fluid" />
     </div>
 
     <div className="col-lg-6 d-block d-lg-none">
-      <img src={imagen2} alt="imagen" className="w-100"/>
+      <img src={imagen2} alt="imagen" className="w-100" />
     </div>
   </section>
-)
+);
 
-export default Hello
+export default Hello;

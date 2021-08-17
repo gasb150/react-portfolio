@@ -1,5 +1,5 @@
-import React from 'react'
-import MainButton from '../components/MainButton'
+import React from 'react';
+import MainButton from '../components/MainButton';
 
 const Contact = () => (
   <>
@@ -7,13 +7,14 @@ const Contact = () => (
     <p>If you want to collaborate, contact me:</p>
     <div className="row">
       <div className="col-lg-3">
-        <MainButton msj='Start colaboration' icon='contact' url="mailto:gasb_150@hotmail.com" />
+        <MainButton msj="Start colaboration" icon="contact" url="mailto:gasb_150@hotmail.com" />
       </div>
     </div>
-    <div>If the link does not work, copy and paste the email: gasb_150@hotmail.com
+    <div>
+      If the link does not work, copy and paste the email: gasb_150@hotmail.com
 
     </div>
   </>
-)
+);
 
-export default Contact
+export default Contact;
