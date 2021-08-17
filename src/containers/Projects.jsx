@@ -32,17 +32,19 @@ const Projects = () => {
 
   return (
     <>
-      <div className="row my-5 py-5">
+      <div id="portfolio" className="row my-5 py-5">
         {projects.map((p, index) => (
           <>
             {index === 0
               ? (
                 <>
 
-                  <div key={`${p.id}_div_title}`} className="col-lg-4 ">
-                    <h4 key={`${p.id_title}`} className="rotated h1">
-                      Projects
-                    </h4>
+                  <div key={`${p.id}_div_title}`} className="col-lg-4 m-auto">
+                    <div className="align-middle">
+                      <h4 key={`${p.id_title}`} className="rotated h-xbig">
+                        Projects
+                      </h4>
+                    </div>
                   </div>
                   <div className="col-lg-8 " key={`${p.id}_div_project}`}>
                     <Project
@@ -66,10 +68,10 @@ const Projects = () => {
                         {index === projects.length - 1
                           ? (
                             <>
-                              <div key={`${p.id}_div_imagen}`} className="col-lg-6 d-flex align-items-end ">
+                              <div key={`${p.id}_div_imagen}`} className="col-lg-6 d-flex align-items-end mt-2 ">
                                 <img src={imagen} alt="geometry_2" />
                               </div>
-                              <div key={`${p.id}_div_project}`} className="col-md-6">
+                              <div key={`${p.id}_div_project}`} className="col-md-6 mt-2">
                                 <Project
                                   key={p.id}
                                   project={p}
@@ -82,7 +84,7 @@ const Projects = () => {
                             </>
                           )
                           : (
-                            <div key={`${p.id}_div_project}`} className="col-md-6">
+                            <div key={`${p.id}_div_project}`} className="col-md-6 mt-2">
                               <Project
                                 key={p.id}
                                 project={p}

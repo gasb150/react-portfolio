@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from '@iconify/react';
 import PropTypes from 'prop-types';
 import logo from '../assets/images/icon/favicon-32x32.png';
 import '../Styles/carrousel.css';
@@ -19,7 +20,7 @@ const Project = ({
       <div className="card">
         <img src={images[0]} alt={alt} className="img-fluid" />
         <div className="card-body bg-dark">
-          <div className="card-title">
+          <div className="card-title mb-4">
             {' '}
             <h1 className="text-light">{name}</h1>
           </div>
@@ -48,12 +49,12 @@ const Project = ({
 
             <div>
               <button type="button" className="btn btn-light mb-3 mt-5" href="url" data-bs-toggle="modal" data-bs-target={`#projectModal_${id}`}>
-                <h3>
+                <h4 className="h5">
 
                   See this project
-                  arrow
+                  <Icon icon="mdi-light:arrow-right" />
 
-                </h3>
+                </h4>
               </button>
               <Modal
                 logo={logo}
