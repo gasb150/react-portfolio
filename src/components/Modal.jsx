@@ -7,7 +7,8 @@ const Modal = ({
   logo, skills, languages, project, frameworks, projects,
 }) => {
   const {
-    images, name, skillId, languageId, frameworkId, id, liveUrl, sourceUrl,
+    images, name, skill_id: skillId, langugage_id: languageId,
+    framework_id: frameworkId, id, live_url: liveUrl, source_url: sourceUrl,
   } = project;
 
   const imagesArr = [];

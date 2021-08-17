@@ -10,7 +10,7 @@ const Hello = () => (
       <h1 className="h1 pt-5 mt-5">Gustavo Sanmartin</h1>
       <p className="py-5">Hello! I am a full-stack software developer! I can help you build a product, feature, or website. Here are my works. If you like what you see and have a project you need coding on, don’t hesitate and contact me.</p>
       <div className="col-md-5">
-        <MainButton msj="Start Colaboration" url="#contact" />
+        <MainButton msj="Start Colaboration" url="#contact" icon="" />
         <div className="py-5">
           <SocialContent bg="dark" />
         </div>

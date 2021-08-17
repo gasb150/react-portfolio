@@ -8,7 +8,7 @@ const Project = ({
   project, skills, languages, frameworks, projects,
 }) => {
   const {
-    images, name, skillId, languageId, frameworkId, id,
+    images, name, skill_id: skillId, language_id: languageId, framework_id: frameworkId, id,
   } = project;
 
   const alt = `image_${name}`;

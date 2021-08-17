@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const MainButton = ({
   url, msj, icon, dowmload,
 }) => {
-  if (typeof dowmload === 'undefined') {
+  if (dowmload === '') {
     return (
       <a href={url} className="btn btn-dark p-4 w-100  ">
         {msj}
@@ -25,7 +25,11 @@ MainButton.propTypes = {
   url: PropTypes.element.isRequired,
   icon: PropTypes.element.isRequired,
   msj: PropTypes.element.isRequired,
-  dowmload: PropTypes.element.isRequired,
+  dowmload: PropTypes.string,
+};
+
+MainButton.defaultProps = {
+  dowmload: '',
 };
 
 export default MainButton;
