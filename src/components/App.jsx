@@ -12,13 +12,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const App = () => (
   <>
 
-  <Header />
-  <Hello />
-  <Projects />
-  <About />
-  <Contact />
-  <Footer />
-
+    <Header />
+    <div className="container">
+      <Hello />
+      <Projects />
+      <About />
+      <Contact />
+  
+    </div>
+    <Footer />
   </>
 )
 
