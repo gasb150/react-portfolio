@@ -7,5 +7,6 @@
 }
 
 .slide-instead{
-  width: 20px;
+  width: 100px!important;
+  height: 50px!important;
 }

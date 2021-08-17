@@ -5,8 +5,8 @@ const Contact = () => (
   <>
     <h1>Get Started</h1>
     <p>If you want to collaborate, contact me:</p>
-    <div class="row">
-      <div class="col-lg-3">
+    <div className="row">
+      <div className="col-lg-3">
         <MainButton msj='Start colaboration' icon='contact' url="mailto:gasb_150@hotmail.com" />
       </div>
     </div>
